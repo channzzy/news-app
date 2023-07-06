@@ -1,5 +1,6 @@
-import 'package:news_app/model/article.dart';
+import 'package:news_app/data/model/article.dart';
 import 'package:flutter/material.dart';
+import 'package:news_app/widgets/custom_sacffold.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class ArticleDetailPage extends StatelessWidget {
@@ -18,7 +19,10 @@ class ArticleDetailPage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Image.network(article.urlToImage),
+            Hero(
+              tag: article.urlToImage,
+              child: Image.network(article.urlToImage),
+            ),
             Padding(
               padding: const EdgeInsets.all(10),
               child: Column(
@@ -70,10 +74,7 @@ class ArticleWebView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('News App'),
-      ),
+    return CustomScaffold(
       body: WebView(
         initialUrl: url,
       ),
