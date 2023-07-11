@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/ui/detail_page.dart';
-import 'package:news_app/ui/list_page.dart';
+import 'package:news_app/ui/article_detail_page.dart';
+import 'package:news_app/ui/home_page.dart';
 import 'package:news_app/data/model/article.dart';
 import 'package:news_app/common/style.dart';
 
@@ -38,6 +38,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
+      debugShowCheckedModeBanner: false,
       initialRoute: HomePage.routeName,
       routes: {
         HomePage.routeName: (context) => const HomePage(),

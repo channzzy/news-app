@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:news_app/widgets/platfrom_widget.dart';
 
 class SettingsPage extends StatelessWidget {
-  static var settingsTitle;
+  static var settingsTitle = 'Settings';
 
   const SettingsPage({Key? key}) : super(key: key);
 
